@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/design.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+       
+        
+        
+        #bt{
+            text-align: center;
+            width: 150px;
+            font-size:20px;
+        }
+    #ui{
+        background-color: #333;
+        padding:30px;
+        margin-top:40px;
+    
+        border-radius: 10px;
+        opacity:0.9;
+        width:500px;
+    }
+
+    #ui label,h1{
+        color:white;
+    }
+    .cont{
+        background-image: url(https://www.nipponpaint.co.in/wp-content/uploads/2018/06/heroArtboard-1-2-e1579960061146.jpg);
+            background-size: cover;
+            height:800px;
+            width:80%;
+            margin:0px auto;
+            
+
+    }
+    </style>
+        <title>Contact Form</title>
+</head>
+
+<body>
+    <div class="border"></div>
+    <div class="cont">
+        <div class="header">
+            <img src="image/cr.jpg" id="icon">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="interior.html">Interior</a></li>
+                <li><a href="exterior.html">Exterior</a></li>
+                <li><a href="#">Wood & Metal</a></li>
+                <li><a href="contact.html">Join</a></li>
+                
+            </ul>
+        </div>
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-3"></div>
+             <div class="col-lg-6 " >
+                <div id="ui">
+                    <h1 class="text-center">JOIN AS A MEMBER</h1>
+                    <form class="form-group text-center" name="form" onsubmit="return fun()" method="post" action="#">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label>First Name</label>
+                                <input type="text" name="fname" class="form-control " id="fname"
+                                    placeholder="Enter your First Name" >
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Last Name</label>
+                                <input type="text" name="lname" class="form-control" id="lname"
+                                    placeholder="Enter your Last Name">
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <label>Email id</label>
+                            <input type="text" id="email" name="email " class="form-control"
+                                placeholder="Enter your Eamil id">
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label>password</label>
+                                <input type="password" id="password" name="password" class="form-control"
+                                    placeholder="Enter your Password">
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Confirm password</label>
+                                <input type="password" id="repassword" name="repassword" class="form-control"
+                                    placeholder="Re-Enter your Password">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label>Mobile no.</label>
+                                <input type="number" id="pnumber" name="pnumber" class="form-control"
+                                    placeholder="Enter your Mobile number">
+                            </div>
+                            <div class="col-lg-6">
+                                <br>
+                                <select class="form-control" id="city" name="city">
+                                    <option>Choose your city</option>
+                                    <option>Chennai</option>
+                                    <option>Madurai </option>
+                                    <option>Coimbatore</option>
+                                    <option>Bangalore</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <input type="button" name="submit" value="JOIN" id="bt" class="btn btn-primary btn-block ">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  
+    <script type="text/javascript">
+       function fun(){
+           var fname=document.getElementById("fname").value;
+           var lname=document.getElementById("lname").value;
+           var email=document.getElementById("email").value;
+           var password=document.getElementById("password").value;
+           var repassword=document.getElementById("repasswors").value;
+           var phone=document.getElementById("pnumber").value;
+           var city=document.getElementById("city").value;
+           if(fname==""){
+               window.alert("Enter first name")
+               return false;
+           }
+       
+           if(lname==" "){
+               alert("Enter last name")
+               return false;
+           }
+
+          if(email==" "){
+               alert("Enter email id")
+               return false;
+           }
+         if(password ==" "){
+               alert("Enter password")
+               return false;
+           }
+          if(repassword==" "){
+               alert("Enter confirm password")
+               return false;
+           }
+        if(phone==" "){
+               alert("Enter mobile no")
+               return false;
+           }
+         if(city==" "){
+               alert("Enter city")
+               return false;
+           }
+       
+       }
+        
+    </script>
+
+
+</body>
+
+</html>
